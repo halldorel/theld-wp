@@ -22,7 +22,12 @@
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/apple-touch-icon-72x72-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/apple-touch-icon-precomposed.png">
 
+    <script src="https://use.typekit.net/bdw8jql.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
 		<?php wp_head(); ?>
+    
+    
 	</head>
 	<body <?php body_class(); ?>>
 	<?php do_action( 'foundationpress_after_body' ); ?>

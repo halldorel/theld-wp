@@ -1,0 +1,46 @@
+@mixin book-3d {
+  -webkit-transition: all 1200ms cubic-bezier(0.25, 1, 0.58, 0.965);
+  -webkit-transition: all 1200ms cubic-bezier(0.25, 1.02, 0.58, 0.965);
+  -moz-transition: all 1200ms cubic-bezier(0.25, 1.02, 0.58, 0.965);
+  -o-transition: all 1200ms cubic-bezier(0.25, 1.02, 0.58, 0.965);
+  transition: all 1200ms cubic-bezier(0.25, 1.02, 0.58, 0.965);
+  -webkit-transition-timing-function: cubic-bezier(0.25, 1, 0.58, 0.965);
+  -webkit-transition-timing-function: cubic-bezier(0.25, 1.02, 0.58, 0.965);
+  -moz-transition-timing-function: cubic-bezier(0.25, 1.02, 0.58, 0.965);
+  -o-transition-timing-function: cubic-bezier(0.25, 1.02, 0.58, 0.965);
+  transition-timing-function: cubic-bezier(0.25, 1.02, 0.58, 0.965);
+}
+
+.book-container {
+  margin: 0px 20px 20px 0px;
+  border-radius: 5px;
+  
+  width: 100%;
+  height: 270px;
+  -webkit-perspective: 1500px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  cursor: pointer;
+  
+  .book-cover {
+    max-width: 320px;
+    height: 180%;
+    border: 1px solid rgba(0, 0, 0, 0);
+    display: block;
+    box-shadow: -10px -8px #cccccc, -8px -8px #cccccc, -6px -4px #cccccc, 0px -2px #cccccc;
+    margin: auto;
+    background-position: center;
+    background-size: 112%;
+    @include book-3d();
+    -webkit-transform: translateZ(80px) scale(0.45) translateY(-47%) translateX(0) rotateX(-20deg) rotateY(20deg);
+  }
+}
+
+.book-container:hover {
+  .book-cover {
+    @include book-3d();
+    -webkit-transform: translateZ(80px) scale(1.0) translateY(0%) translateX(0) rotateX(0deg) rotateY(0deg)
+  }
+}

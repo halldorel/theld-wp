@@ -4,10 +4,15 @@
 */
 
 // We use these to define default font stacks
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
-$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
+
+@import "../site/book_animation";
+@import "../site/theld";
+
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-serif: "adelle", Cambria, "Times New Roman", Times, serif;
+$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+$font-family-condensed: "nimbus-sans-condensed", $font-family-sans-serif;
 // We use these to define default font weights
 $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
@@ -33,8 +38,12 @@ $oil         : #333333;
 $jet         : #222222;
 $black       : #000000;
 
+$theld-dark  : #2F2F2F;
+$theld-blue  : #5B71C1;
+
+
 // We use these as default colors throughout
-$primary-color: #008CBA;
+$primary-color: $theld-blue;
 $secondary-color: #e7e7e7;
 $alert-color: #f04124;
 $success-color: #43AC6A;
@@ -43,8 +52,8 @@ $info-color: #a0d3e8;
 
 // We use these to control various global styles
 $body-bg: $white;
-$body-font-color: $jet;
-$body-font-family: $font-family-sans-serif;
+$body-font-color: $theld-dark;
+$body-font-family: $font-family-serif;
 $body-font-weight: $font-weight-normal;
 $body-font-style: normal;
 $header-font-weight: 300;
@@ -57,3 +66,89 @@ $medium-breakpoint: em-calc(1024);
 $topbar-breakpoint: em-calc(820);
 $large-breakpoint:  em-calc(1440);
 $xlarge-breakpoint: em-calc(1920);
+
+// Background color for the top bar
+$topbar-bg: $white;
+$topbar-bg-color: $white;
+// Height and margin
+$topbar-height: rem-calc(119);
+$topbar-margin-bottom: 0;
+
+// Controlling the styles for the title in the top bar
+
+$topbar-link-font-size: rem-calc(30);
+
+$topbar-dropdown-toggle-color: $theld-dark;
+
+$topbar-menu-link-color: $theld-dark;
+$topbar-menu-icon-color: $theld-dark;
+
+$topbar-title-weight: 700;
+$topbar-title-font-size: rem-calc(60);
+.name h1 {
+  font-family: $font-family-condensed !important;
+  letter-spacing: rem-calc(1);
+  font-style: normal;
+}
+
+ul.title-area h1 a {
+  padding-left: rem-calc(13) !important;
+}
+$topbar-link-padding: ($topbar-height / 5);
+
+$topbar-link-bg-color-hover: $white;
+$topbar-link-bg-hover: $white;
+$topbar-link-color: $theld-dark;
+$topbar-link-color-hover: $theld-dark;
+$topbar-link-font-family: $font-family-condensed;
+$topbar-link-text-transform: uppercase;
+
+$topbar-link-color-active: $theld-dark;
+$topbar-link-color-active-hover: $theld-dark;
+$topbar-link-bg-active: $white !important;
+$topbar-link-bg-active-hover: $white !important;
+
+// Dropdown
+$topbar-dropdown-bg: $white;
+$topbar-dropdown-link-color: $theld-dark;
+$topbar-dropdown-link-color-hover: $topbar-link-color-hover;
+$topbar-dropdown-link-bg: $white;
+$topbar-dropdown-link-bg-hover: scale-color($white, $lightness: -5%);
+$topbar-dropdown-link-weight: $font-weight-normal;
+$topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-color: $white;
+$topbar-dropdown-toggle-alpha: .4;
+
+.top-bar-container {
+  border-bottom: 7px solid $theld-blue;
+}
+
+.top-bar-menu:hover li.menu-item.active {
+  border-bottom: none !important;
+}
+.top-bar-menu li.menu-item:hover a span {
+  border-bottom: 4px solid $theld-dark;
+}
+
+.top-bar-menu li.menu-item.active a span {
+  border-bottom: 4px solid $theld-dark;
+}
+
+
+// We use these to control header font styles
+$header-font-family: $font-family-condensed;
+$header-font-weight: 700;
+$header-font-style: normal;
+$header-font-color: $theld-dark;
+$header-line-height: 1.4;
+$header-top-margin: .2rem;
+$header-bottom-margin: .5rem;
+$header-text-rendering: optimizeLegibility;
+
+// We use these to control header font sizes
+$h1-font-size: rem-calc(44);
+$h2-font-size: rem-calc(37);
+$h3-font-size: rem-calc(27);
+$h4-font-size: rem-calc(23);
+$h5-font-size: rem-calc(18);
+$h6-font-size: 1rem;
