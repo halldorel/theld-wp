@@ -1,20 +1,22 @@
-#homepage-hero {
-	background: url("http://foundation.zurb.com/assets/img/marquee-stars.svg") repeat scroll 0 0 #074E68;
-	padding: rem-calc(20) 0;
-	margin: - rem-calc(32) 0 rem-calc(32);
-	position: relative;
-	text-align: left;
-	height: auto;
+#random-quote {
+	text-align: center;
+	font-style: italic;
+	font-size: rem-calc(18);
+}
 
-		h1 { font-weight: 500; }
+.milliprik {
+	border-top: 2px dashed lighten($primary-color, 30);
+	margin: rem-calc(20) rem-calc(0);
+}
 
-		h1 a, h4 { color: #fff; }
+p.center {
+	text-align: center;
+}
 
-		.floatingyeti img {
-			max-width: 30%;
-			position: absolute;
-			right: rem-calc(100);
-		}
+a.show-all {
+	text-decoration: underline;
+}
 
-		.download { margin-top: rem-calc(20); }
-	}
+#about {
+	padding-bottom: rem-calc(40);
+}

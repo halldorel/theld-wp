@@ -1,6 +1,13 @@
 // Add some whitespace above the footer for medium-up screens
 @media #{$medium-up} {
 	footer.row {
-		margin-top: rem-calc(60);
+		margin-top: rem-calc(20);
+		padding: 0 0 rem-calc(20) 0;
 	}
+}
+
+.footer-divider {
+	background: $primary-color;
+	color: $white;
+	border: 3px solid $primary-color;
 }

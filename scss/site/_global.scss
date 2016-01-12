@@ -55,8 +55,10 @@ img.alignright {
 .overview-grid {
   a {
     font-weight: 700;
-    font-size: rem-calc(22);
-    line-height: rem-calc(50);
+    font-size: rem-calc(18);
+    display: block;
+    height: rem-calc(350);
+    line-height: rem-calc(25);
     color: $theld-dark;
   }
   @media #{$large-up} {
