@@ -76,7 +76,7 @@ $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
 
-$topbar-link-font-size: rem-calc(30);
+$topbar-link-font-size: rem-calc(16);
 
 $topbar-dropdown-toggle-color: $theld-dark;
 
@@ -94,13 +94,14 @@ $topbar-title-font-size: rem-calc(60);
 ul.title-area h1 a {
   padding-left: rem-calc(13) !important;
 }
+
 $topbar-link-padding: ($topbar-height / 5);
 
 $topbar-link-bg-color-hover: $white;
 $topbar-link-bg-hover: $white;
 $topbar-link-color: $theld-dark;
 $topbar-link-color-hover: $theld-dark;
-$topbar-link-font-family: $font-family-condensed;
+$topbar-link-font-family: $font-family-serif;
 $topbar-link-text-transform: uppercase;
 
 $topbar-link-color-active: $theld-dark;
@@ -123,15 +124,23 @@ $topbar-dropdown-toggle-alpha: .4;
   border-bottom: 7px solid $theld-blue;
 }
 
+.top-bar-section ul li > a {
+  padding-left: rem-calc(7) !important;
+  padding-right: rem-calc(7) !important;
+  font-weight: normal !important;
+  text-transform: none !important;
+}
+
 .top-bar-menu:hover li.menu-item.active {
   border-bottom: none !important;
 }
+
 .top-bar-menu li.menu-item:hover a span {
-  border-bottom: 4px solid $theld-dark;
+  border-bottom: 1px solid $theld-dark;
 }
 
 .top-bar-menu li.menu-item.active a span {
-  border-bottom: 4px solid $theld-dark;
+  border-bottom: 1px solid $theld-dark;
 }
 
 

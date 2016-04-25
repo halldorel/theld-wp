@@ -20,3 +20,13 @@ a.show-all {
 #about {
 	padding-bottom: rem-calc(40);
 }
+
+.quotescollection-quote p:before {
+	content:"„";
+	display: inline;
+}
+
+.quotescollection-quote p:after {
+	content:"“";
+	display: inline;
+}

@@ -5,8 +5,8 @@ Template Name: Forsíða
 get_header(); ?>
 
 	<div class="row">
-		<div id="random-quote" class="small-12 columns">
-		 „Stök spök koma hér, eða allavega er það ætlunin.“
+		<div id="random-quote" class="small-12 columns"> 
+            <?php dynamic_sidebar( 'sidebar-widgets' ); ?>
 		</div>
 	</div>
 	<div class="row" id="about-section">
@@ -65,6 +65,7 @@ get_header(); ?>
       	</ul>
       	<p class="center"><a href="/ljodabaekur" class="show-all">Allar ljóðabækur</a></p>
       	</div></div>
+
       	<div class="milliprik"></div>
       	<div class="row">
       	<div class="small-12 columns">
@@ -94,11 +95,44 @@ get_header(); ?>
       	  <?php endforeach; endif;
       	  ?>
       	</ul>
-      	<p class="center"><a href="/ljodabaekur" class="show-all">Öll smásagnasöfn</a></p>
+      	<p class="center"><a href="/smasogur" class="show-all">Öll smásagnasöfn</a></p>
       </div>
 
 	</div>
 
-	<?php get_sidebar(); ?>
+            <div class="milliprik"></div>
+            <div class="row">
+            <div class="small-12 columns">
+            <h2>Barnaljóð</h2>
+            <ul class="overview-grid">
+              <?php
+              $child_pages = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE post_parent = 154 AND post_type = 'page' ORDER BY RAND() LIMIT 3", 'OBJECT');    ?>
+                <?php if ( $child_pages ) : foreach ( $child_pages as $pageChild ) : setup_postdata( $pageChild ); ?> 
+      
+                <li>
+                  <a href="<?php echo  get_permalink($pageChild->ID); ?>" rel="bookmark" title="<?php echo $pageChild->post_title; ?>">
+                  <?php echo $pageChild->post_title; ?>
+                <div class="child-thumb">
+                  <?php 
+                  $url = wp_get_attachment_image_src( get_post_thumbnail_id($pageChild->ID) , 'medium');
+                  $thumbnail_url = $url[0];
+                  ?>
+                  <div class="book-container">
+                    <div class="book-cover" style="background:url('<?php echo $thumbnail_url;?>')">
+                    </div>
+                  </div>
+      
+                </div>
+                </a>
+              </li>
+      
+              <?php endforeach; endif;
+              ?>
+            </ul>
+            <p class="center"><a href="/barnaljod" class="show-all">Allar barnaljóðabækur</a></p>
+      </div>
+
+      </div>
+
 </div>
 <?php get_footer(); ?>

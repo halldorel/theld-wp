@@ -14,9 +14,6 @@
 </section>
 <div class="footer-divider"></div>
 <footer class="row">
-	<?php do_action( 'foundationpress_before_footer' ); ?>
-	<?php dynamic_sidebar( 'footer-widgets' ); ?>
-	<?php do_action( 'foundationpress_after_footer' ); ?>
 	© Þórarinn Eldjárn 2016
 </footer>
 
